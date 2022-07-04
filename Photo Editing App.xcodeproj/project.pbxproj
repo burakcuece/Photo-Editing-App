@@ -17,6 +17,9 @@
 		72C1057428730CEF00C79F64 /* FileManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C1057328730CEF00C79F64 /* FileManager+Extensions.swift */; };
 		72C1057628730DC900C79F64 /* ImagePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C1057528730DC900C79F64 /* ImagePickerViewModel.swift */; };
 		72C105782873105700C79F64 /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C105772873105700C79F64 /* Picker.swift */; };
+		72C1057A28735F0500C79F64 /* ContentView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C1057928735F0500C79F64 /* ContentView+Extensions.swift */; };
+		72C1057C287360AE00C79F64 /* ImagePickerCordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C1057B287360AE00C79F64 /* ImagePickerCordinator.swift */; };
+		72C1057E2873614700C79F64 /* PhotoCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C1057D2873614700C79F64 /* PhotoCaptureView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		72C1057328730CEF00C79F64 /* FileManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extensions.swift"; sourceTree = "<group>"; };
 		72C1057528730DC900C79F64 /* ImagePickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewModel.swift; sourceTree = "<group>"; };
 		72C105772873105700C79F64 /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
+		72C1057928735F0500C79F64 /* ContentView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView+Extensions.swift"; sourceTree = "<group>"; };
+		72C1057B287360AE00C79F64 /* ImagePickerCordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerCordinator.swift; sourceTree = "<group>"; };
+		72C1057D2873614700C79F64 /* PhotoCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				726C0198287074A3009589C3 /* ContentView.swift */,
+				72C1057D2873614700C79F64 /* PhotoCaptureView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -97,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				72C1057528730DC900C79F64 /* ImagePickerViewModel.swift */,
+				72C1057B287360AE00C79F64 /* ImagePickerCordinator.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -121,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				72C1057328730CEF00C79F64 /* FileManager+Extensions.swift */,
+				72C1057928735F0500C79F64 /* ContentView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -195,11 +204,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72C1057C287360AE00C79F64 /* ImagePickerCordinator.swift in Sources */,
 				72C1057628730DC900C79F64 /* ImagePickerViewModel.swift in Sources */,
 				726C01A0287074A5009589C3 /* Persistence.swift in Sources */,
 				726C0199287074A3009589C3 /* ContentView.swift in Sources */,
 				72C1057228730CB800C79F64 /* ImagePicker.swift in Sources */,
+				72C1057E2873614700C79F64 /* PhotoCaptureView.swift in Sources */,
 				726C0197287074A3009589C3 /* Photo_Editing_AppApp.swift in Sources */,
+				72C1057A28735F0500C79F64 /* ContentView+Extensions.swift in Sources */,
 				72C105782873105700C79F64 /* Picker.swift in Sources */,
 				726C01A3287074A5009589C3 /* Photo_Editing_App.xcdatamodeld in Sources */,
 				72C1057428730CEF00C79F64 /* FileManager+Extensions.swift in Sources */,

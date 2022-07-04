@@ -6,54 +6,29 @@
 //
 
 import SwiftUI
-import CoreData
-
 struct ContentView: View {
-    @EnvironmentObject var vm: ImagePickerViewModel
+    @State private var showImagePicker : Bool = false
+    @State private var image : Image? = nil
+    
     var body: some View {
-        NavigationView {
+        NavigationView{
             VStack {
-                if let image = vm.image {
-                    Image(uiImage: image)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                } else {
-                    Image(systemName: "photo.fill")
-                        .resizable()
-                        .scaledToFit()
-                        .opacity(0.6)
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                        .padding(.horizontal)
-                }
-                HStack {
-                    Button {
-                        vm.source = .camera
-                        vm.showPicker = true
-                    } label: {
-                        Text("Kamera")
-                    }
-                    
-                    Button {
-                        vm.source = .library
-                        vm.showPicker = true
-                    } label: {
-                        Text("Foto")
-                    }
-
-                }
-                Spacer()
+                image?.resizable().scaledToFit()
+                Button("Öffne Galerie"){
+                    self.showImagePicker = true
+                }.padding()
+                    .foregroundColor(Color.white)
+                    .background(Color.blue)
+                    .cornerRadius(10)
+            }.sheet(isPresented: self.$showImagePicker) {
+                PhotoCaptureView(showImagePicker: self.$showImagePicker, image: self.$image)
             }
-            .sheet(isPresented: $vm.showPicker, content: {
-            })
-            .navigationTitle("Meine Fotos")
+            .navigationBarTitle(Text("Galerie"))
         }
     }
 }
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .environmentObject(ImagePickerViewModel())
     }
 }
