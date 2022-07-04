@@ -6,24 +6,48 @@
 //
 
 import SwiftUI
+
 struct ContentView: View {
+    
     @State private var showImagePicker : Bool = false
     @State private var image : Image? = nil
     
     var body: some View {
+        
         NavigationView{
             VStack {
-                image?.resizable().scaledToFit()
+                
+               Spacer()
+               
+                if let image = image {
+                    Image(uiImage: UIImage())
+                        .resizable()
+                        .scaledToFit()
+                        .opacity(0.6)
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .padding(.horizontal)
+                    
+                } else {
+                Image(systemName: "photo.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .opacity(0.6)
+                    .frame(minWidth: 0, maxWidth: .infinity)
+                    .padding(.horizontal)
+                }
+                Spacer()
+                
                 Button("Öffne Galerie"){
                     self.showImagePicker = true
                 }.padding()
                     .foregroundColor(Color.white)
                     .background(Color.blue)
                     .cornerRadius(10)
-            }.sheet(isPresented: self.$showImagePicker) {
+            }
+            .sheet(isPresented: self.$showImagePicker) {
                 PhotoCaptureView(showImagePicker: self.$showImagePicker, image: self.$image)
             }
-            .navigationBarTitle(Text("Galerie"))
+            .navigationBarTitle(Text("Foto bearbeiten"))
         }
     }
 }
