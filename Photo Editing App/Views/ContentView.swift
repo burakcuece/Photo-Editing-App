@@ -12,6 +12,8 @@ struct ContentView: View {
     @State private var showImagePicker : Bool = false
     @State private var image : Image? = nil
     
+    @ObservedObject var camera = CameraModel()
+        
     var body: some View {
         
         NavigationView{

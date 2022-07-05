@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		726C0197287074A3009589C3 /* Photo_Editing_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726C0196287074A3009589C3 /* Photo_Editing_AppApp.swift */; };
+		726C0197287074A3009589C3 /* Photo_Editing_App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726C0196287074A3009589C3 /* Photo_Editing_App.swift */; };
 		726C0199287074A3009589C3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726C0198287074A3009589C3 /* ContentView.swift */; };
 		726C019B287074A5009589C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 726C019A287074A5009589C3 /* Assets.xcassets */; };
 		726C019E287074A5009589C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 726C019D287074A5009589C3 /* Preview Assets.xcassets */; };
@@ -22,11 +22,12 @@
 		72C1057E2873614700C79F64 /* PhotoCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C1057D2873614700C79F64 /* PhotoCaptureView.swift */; };
 		72C1058C287440C500C79F64 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C1058B287440C500C79F64 /* CameraView.swift */; };
 		72C1058E2874419E00C79F64 /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C1058D2874419E00C79F64 /* CameraModel.swift */; };
+		72C105922874543500C79F64 /* CamerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C105912874543500C79F64 /* CamerPreview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		726C0193287074A3009589C3 /* Photo Editing App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo Editing App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		726C0196287074A3009589C3 /* Photo_Editing_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo_Editing_AppApp.swift; sourceTree = "<group>"; };
+		726C0196287074A3009589C3 /* Photo_Editing_App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo_Editing_App.swift; sourceTree = "<group>"; };
 		726C0198287074A3009589C3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		726C019A287074A5009589C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		726C019D287074A5009589C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -41,6 +42,8 @@
 		72C1057D2873614700C79F64 /* PhotoCaptureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCaptureView.swift; sourceTree = "<group>"; };
 		72C1058B287440C500C79F64 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		72C1058D2874419E00C79F64 /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
+		72C1058F2874512A00C79F64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72C105912874543500C79F64 /* CamerPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamerPreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,13 +76,14 @@
 		726C0195287074A3009589C3 /* Photo Editing App */ = {
 			isa = PBXGroup;
 			children = (
-				726C0196287074A3009589C3 /* Photo_Editing_AppApp.swift */,
+				726C0196287074A3009589C3 /* Photo_Editing_App.swift */,
 				72C1056C28730C3C00C79F64 /* Views */,
 				72C1056D28730C5500C79F64 /* ViewModels */,
 				72C1056E28730C6700C79F64 /* Models */,
 				72C1056F28730C7500C79F64 /* UIViewRepresentables */,
 				72C1057028730C8600C79F64 /* Extensions */,
 				72C1057F2874286600C79F64 /* Services */,
+				72C1058F2874512A00C79F64 /* Info.plist */,
 				726C019A287074A5009589C3 /* Assets.xcassets */,
 				726C019F287074A5009589C3 /* Persistence.swift */,
 				726C01A1287074A5009589C3 /* Photo_Editing_App.xcdatamodeld */,
@@ -128,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				72C1057128730CB800C79F64 /* ImagePicker.swift */,
+				72C105912874543500C79F64 /* CamerPreview.swift */,
 			);
 			path = UIViewRepresentables;
 			sourceTree = "<group>";
@@ -225,11 +230,12 @@
 				72C1057C287360AE00C79F64 /* ImagePickerCordinator.swift in Sources */,
 				72C1057628730DC900C79F64 /* ImagePickerViewModel.swift in Sources */,
 				726C01A0287074A5009589C3 /* Persistence.swift in Sources */,
+				72C105922874543500C79F64 /* CamerPreview.swift in Sources */,
 				72C1058C287440C500C79F64 /* CameraView.swift in Sources */,
 				726C0199287074A3009589C3 /* ContentView.swift in Sources */,
 				72C1057228730CB800C79F64 /* ImagePicker.swift in Sources */,
 				72C1057E2873614700C79F64 /* PhotoCaptureView.swift in Sources */,
-				726C0197287074A3009589C3 /* Photo_Editing_AppApp.swift in Sources */,
+				726C0197287074A3009589C3 /* Photo_Editing_App.swift in Sources */,
 				72C1058E2874419E00C79F64 /* CameraModel.swift in Sources */,
 				72C1057A28735F0500C79F64 /* ContentView+Extensions.swift in Sources */,
 				72C105782873105700C79F64 /* Picker.swift in Sources */,
@@ -365,7 +371,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Photo Editing App/Preview Content\"";
 				DEVELOPMENT_TEAM = 95W23GS9Y8;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "/Users/burakcuce/Documents/dev/Apps/Photo Editing App/Photo Editing App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -394,7 +401,8 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Photo Editing App/Preview Content\"";
 				DEVELOPMENT_TEAM = 95W23GS9Y8;
 				ENABLE_PREVIEWS = YES;
-				GENERATE_INFOPLIST_FILE = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = "/Users/burakcuce/Documents/dev/Apps/Photo Editing App/Photo Editing App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
