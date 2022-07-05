@@ -17,32 +17,51 @@ struct ContentView: View {
         NavigationView{
             VStack {
                 
-               Spacer()
-               
+                Spacer()
+                
                 if let image = image {
-                    Image(uiImage: UIImage())
+                    image
+                        .resizable()
+                        .renderingMode(.original)
+                        .scaledToFit()
+                        .frame(minWidth: 0, maxWidth: .infinity)
+                        .padding(.horizontal)
+                    
+                } else {
+                    Image(systemName: "photo")
                         .resizable()
                         .scaledToFit()
                         .opacity(0.6)
                         .frame(minWidth: 0, maxWidth: .infinity)
                         .padding(.horizontal)
-                    
-                } else {
-                Image(systemName: "photo.fill")
-                    .resizable()
-                    .scaledToFit()
-                    .opacity(0.6)
-                    .frame(minWidth: 0, maxWidth: .infinity)
-                    .padding(.horizontal)
                 }
                 Spacer()
                 
-                Button("Öffne Galerie"){
-                    self.showImagePicker = true
-                }.padding()
-                    .foregroundColor(Color.white)
-                    .background(Color.blue)
-                    .cornerRadius(10)
+                HStack {
+                    
+                    Button(){
+                        self.showImagePicker = true
+                    } label: {
+                        Image(systemName: "photo.circle")
+                            .resizable()
+                            .renderingMode(.original)
+                            .frame(width: 80, height: 80)
+                            .foregroundColor(Color.black)
+                            .cornerRadius(10)
+                            .padding()
+                    }
+                    Button(){
+                        
+                    } label: {
+                        Image(systemName: "camera.circle")
+                            .resizable()
+                            .renderingMode(.original)
+                            .frame(width: 80, height: 80)
+                            .foregroundColor(Color.black)
+                            .cornerRadius(10)
+                            .padding()
+                    }
+                }
             }
             .sheet(isPresented: self.$showImagePicker) {
                 PhotoCaptureView(showImagePicker: self.$showImagePicker, image: self.$image)
