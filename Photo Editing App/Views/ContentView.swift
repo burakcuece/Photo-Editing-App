@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CameraView
 
 struct ContentView: View {
     
@@ -29,10 +28,10 @@ struct ContentView: View {
                         .padding(.horizontal)
                     
                 } else {
-                    Image(systemName: "photo")
+                    Image(systemName: "photo.fill")
                         .resizable()
                         .scaledToFit()
-                        .opacity(0.6)
+                        .opacity(0.8)
                         .frame(minWidth: 0, maxWidth: .infinity)
                         .padding(.horizontal)
                 }
@@ -67,6 +66,7 @@ struct ContentView: View {
             .sheet(isPresented: self.$showImagePicker) {
                 PhotoCaptureView(showImagePicker: self.$showImagePicker, image: self.$image)
             }
+            .background(Color(red: 242 / 255, green: 233 / 255, blue: 228 / 255))
             .navigationBarTitle(Text("Foto bearbeiten"))
         }
     }
