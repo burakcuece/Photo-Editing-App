@@ -1,5 +1,5 @@
 //
-//  CamerPreview.swift
+//  CameraPreview.swift
 //  Photo Editing App
 //
 //  Created by Burak Cüce on 05.07.22.

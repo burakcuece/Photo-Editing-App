@@ -22,7 +22,7 @@
 		72C1057E2873614700C79F64 /* PhotoCaptureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C1057D2873614700C79F64 /* PhotoCaptureView.swift */; };
 		72C1058C287440C500C79F64 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C1058B287440C500C79F64 /* CameraView.swift */; };
 		72C1058E2874419E00C79F64 /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C1058D2874419E00C79F64 /* CameraModel.swift */; };
-		72C105922874543500C79F64 /* CamerPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C105912874543500C79F64 /* CamerPreview.swift */; };
+		72C105922874543500C79F64 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C105912874543500C79F64 /* CameraPreview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +43,7 @@
 		72C1058B287440C500C79F64 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		72C1058D2874419E00C79F64 /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
 		72C1058F2874512A00C79F64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		72C105912874543500C79F64 /* CamerPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamerPreview.swift; sourceTree = "<group>"; };
+		72C105912874543500C79F64 /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				72C1057128730CB800C79F64 /* ImagePicker.swift */,
-				72C105912874543500C79F64 /* CamerPreview.swift */,
+				72C105912874543500C79F64 /* CameraPreview.swift */,
 			);
 			path = UIViewRepresentables;
 			sourceTree = "<group>";
@@ -230,7 +230,7 @@
 				72C1057C287360AE00C79F64 /* ImagePickerCordinator.swift in Sources */,
 				72C1057628730DC900C79F64 /* ImagePickerViewModel.swift in Sources */,
 				726C01A0287074A5009589C3 /* Persistence.swift in Sources */,
-				72C105922874543500C79F64 /* CamerPreview.swift in Sources */,
+				72C105922874543500C79F64 /* CameraPreview.swift in Sources */,
 				72C1058C287440C500C79F64 /* CameraView.swift in Sources */,
 				726C0199287074A3009589C3 /* ContentView.swift in Sources */,
 				72C1057228730CB800C79F64 /* ImagePicker.swift in Sources */,
