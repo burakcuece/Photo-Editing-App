@@ -75,6 +75,7 @@
 				72C1056E28730C6700C79F64 /* Models */,
 				72C1056F28730C7500C79F64 /* UIViewRepresentables */,
 				72C1057028730C8600C79F64 /* Extensions */,
+				72C1057F2874286600C79F64 /* Services */,
 				726C019A287074A5009589C3 /* Assets.xcassets */,
 				726C019F287074A5009589C3 /* Persistence.swift */,
 				726C01A1287074A5009589C3 /* Photo_Editing_App.xcdatamodeld */,
@@ -134,6 +135,13 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		72C1057F2874286600C79F64 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,6 +158,8 @@
 			dependencies = (
 			);
 			name = "Photo Editing App";
+			packageProductDependencies = (
+			);
 			productName = "Photo Editing App";
 			productReference = 726C0193287074A3009589C3 /* Photo Editing App.app */;
 			productType = "com.apple.product-type.application";
@@ -178,6 +188,8 @@
 				Base,
 			);
 			mainGroup = 726C018A287074A3009589C3;
+			packageReferences = (
+			);
 			productRefGroup = 726C0194287074A3009589C3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";

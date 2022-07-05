@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CameraView
 
 struct ContentView: View {
     
@@ -39,7 +40,7 @@ struct ContentView: View {
                 
                 HStack {
                     
-                    Button(){
+                    Button {
                         self.showImagePicker = true
                     } label: {
                         Image(systemName: "photo.circle")
@@ -50,7 +51,7 @@ struct ContentView: View {
                             .cornerRadius(10)
                             .padding()
                     }
-                    Button(){
+                    Button {
                         
                     } label: {
                         Image(systemName: "camera.circle")
