@@ -23,6 +23,9 @@
 		72C1058C287440C500C79F64 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C1058B287440C500C79F64 /* CameraView.swift */; };
 		72C1058E2874419E00C79F64 /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C1058D2874419E00C79F64 /* CameraModel.swift */; };
 		72C105922874543500C79F64 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C105912874543500C79F64 /* CameraPreview.swift */; };
+		72FFE1262876F75100C0AE35 /* DrawingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FFE1252876F75100C0AE35 /* DrawingScreen.swift */; };
+		72FFE1282876F7F100C0AE35 /* DrawingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FFE1272876F7F100C0AE35 /* DrawingViewModel.swift */; };
+		72FFE12A2876FB4900C0AE35 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FFE1292876FB4900C0AE35 /* CanvasView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		72C1058D2874419E00C79F64 /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
 		72C1058F2874512A00C79F64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72C105912874543500C79F64 /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
+		72FFE1252876F75100C0AE35 /* DrawingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingScreen.swift; sourceTree = "<group>"; };
+		72FFE1272876F7F100C0AE35 /* DrawingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewModel.swift; sourceTree = "<group>"; };
+		72FFE1292876FB4900C0AE35 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +83,12 @@
 			isa = PBXGroup;
 			children = (
 				726C0196287074A3009589C3 /* Photo_Editing_App.swift */,
-				72C1056C28730C3C00C79F64 /* Views */,
-				72C1056D28730C5500C79F64 /* ViewModels */,
-				72C1056E28730C6700C79F64 /* Models */,
-				72C1056F28730C7500C79F64 /* UIViewRepresentables */,
-				72C1057028730C8600C79F64 /* Extensions */,
-				72C1057F2874286600C79F64 /* Services */,
+				72C1056C28730C3C00C79F64 /* View */,
+				72C1056D28730C5500C79F64 /* ViewModel */,
+				72C1056E28730C6700C79F64 /* Model */,
+				72C1056F28730C7500C79F64 /* UIViewRepresentable */,
+				72C1057028730C8600C79F64 /* Extension */,
+				72C1057F2874286600C79F64 /* Service */,
 				72C1058F2874512A00C79F64 /* Info.plist */,
 				726C019A287074A5009589C3 /* Assets.xcassets */,
 				726C019F287074A5009589C3 /* Persistence.swift */,
@@ -100,57 +106,60 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		72C1056C28730C3C00C79F64 /* Views */ = {
+		72C1056C28730C3C00C79F64 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				726C0198287074A3009589C3 /* ContentView.swift */,
 				72C1057D2873614700C79F64 /* PhotoCaptureView.swift */,
 				72C1058B287440C500C79F64 /* CameraView.swift */,
+				72FFE1252876F75100C0AE35 /* DrawingScreen.swift */,
 			);
-			path = Views;
+			path = View;
 			sourceTree = "<group>";
 		};
-		72C1056D28730C5500C79F64 /* ViewModels */ = {
+		72C1056D28730C5500C79F64 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				72C1057528730DC900C79F64 /* ImagePickerViewModel.swift */,
 				72C1057B287360AE00C79F64 /* ImagePickerCordinator.swift */,
+				72FFE1272876F7F100C0AE35 /* DrawingViewModel.swift */,
 			);
-			path = ViewModels;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
-		72C1056E28730C6700C79F64 /* Models */ = {
+		72C1056E28730C6700C79F64 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				72C105772873105700C79F64 /* Picker.swift */,
 				72C1058D2874419E00C79F64 /* CameraModel.swift */,
 			);
-			path = Models;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		72C1056F28730C7500C79F64 /* UIViewRepresentables */ = {
+		72C1056F28730C7500C79F64 /* UIViewRepresentable */ = {
 			isa = PBXGroup;
 			children = (
 				72C1057128730CB800C79F64 /* ImagePicker.swift */,
 				72C105912874543500C79F64 /* CameraPreview.swift */,
+				72FFE1292876FB4900C0AE35 /* CanvasView.swift */,
 			);
-			path = UIViewRepresentables;
+			path = UIViewRepresentable;
 			sourceTree = "<group>";
 		};
-		72C1057028730C8600C79F64 /* Extensions */ = {
+		72C1057028730C8600C79F64 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				72C1057328730CEF00C79F64 /* FileManager+Extensions.swift */,
 				72C1057928735F0500C79F64 /* ContentView+Extensions.swift */,
 			);
-			path = Extensions;
+			path = Extension;
 			sourceTree = "<group>";
 		};
-		72C1057F2874286600C79F64 /* Services */ = {
+		72C1057F2874286600C79F64 /* Service */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Services;
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -228,13 +237,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				72C1057C287360AE00C79F64 /* ImagePickerCordinator.swift in Sources */,
+				72FFE12A2876FB4900C0AE35 /* CanvasView.swift in Sources */,
 				72C1057628730DC900C79F64 /* ImagePickerViewModel.swift in Sources */,
 				726C01A0287074A5009589C3 /* Persistence.swift in Sources */,
 				72C105922874543500C79F64 /* CameraPreview.swift in Sources */,
 				72C1058C287440C500C79F64 /* CameraView.swift in Sources */,
+				72FFE1262876F75100C0AE35 /* DrawingScreen.swift in Sources */,
 				726C0199287074A3009589C3 /* ContentView.swift in Sources */,
 				72C1057228730CB800C79F64 /* ImagePicker.swift in Sources */,
 				72C1057E2873614700C79F64 /* PhotoCaptureView.swift in Sources */,
+				72FFE1282876F7F100C0AE35 /* DrawingViewModel.swift in Sources */,
 				726C0197287074A3009589C3 /* Photo_Editing_App.swift in Sources */,
 				72C1058E2874419E00C79F64 /* CameraModel.swift in Sources */,
 				72C1057A28735F0500C79F64 /* ContentView+Extensions.swift in Sources */,
