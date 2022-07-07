@@ -9,6 +9,7 @@ import UIKit
 import SwiftUI
 
 class ImagePickerCordinator : NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate{
+    
 @Binding var isShown : Bool
 @Binding var image : Image?
 init(isShown : Binding<Bool>, image: Binding<Image?>) {

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 import PencilKit
 
 struct CanvasView: UIViewRepresentable {
@@ -14,6 +15,8 @@ struct CanvasView: UIViewRepresentable {
     @Binding var imageData: Data
     @Binding var toolPicker: PKToolPicker
     
+    var rect: CGSize
+    
     func makeUIView(context: Context) ->PKCanvasView {
         canvas.drawingPolicy = .anyInput
         
@@ -21,14 +24,10 @@ struct CanvasView: UIViewRepresentable {
         canvas.backgroundColor = .clear
         canvas.drawingPolicy = .anyInput
         
-        return canvas
-    }
-    
-    func updateUIView(_ uiView: UIViewType, context: Context) {
-        
         if let image = UIImage(data: imageData) {
             
             let imageView = UIImageView(image: image)
+            imageView.frame = CGRect(x: 0, y: 0, width: rect.width, height: rect.height)
             imageView.contentMode = .scaleAspectFit
             imageView.clipsToBounds = true
             
@@ -40,5 +39,12 @@ struct CanvasView: UIViewRepresentable {
             toolPicker.addObserver(canvas)
             canvas.becomeFirstResponder()
         }
+        
+        return canvas
+    }
+    
+    func updateUIView(_ uiView: UIViewType, context: Context) {
+        
+       
     }
 }

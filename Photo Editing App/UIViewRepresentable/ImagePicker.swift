@@ -9,16 +9,45 @@ import UIKit
 import SwiftUI
 
 struct ImagePicker : UIViewControllerRepresentable {
-   @Binding var isShown : Bool
-   @Binding var image : Image?
-func updateUIViewController(_ uiViewController: UIImagePickerController, context: UIViewControllerRepresentableContext<ImagePicker>) {
-}
-func makeCoordinator() -> ImagePickerCordinator {
-      return ImagePickerCordinator(isShown: $isShown, image: $image)
-   }
-func makeUIViewController(context: UIViewControllerRepresentableContext<ImagePicker>) -> UIImagePickerController {
-let picker = UIImagePickerController()
-      picker.delegate = context.coordinator
-      return picker
-   }
+    
+    @Binding var showPicker: Bool
+    @Binding var imageData: Data
+    
+    func makeCoordinator() -> Coordinator {
+        return ImagePicker.Coordinator(parent: self)
+    }
+  
+    func makeUIViewController(context: Context) -> UIImagePickerController {
+        
+        let controller = UIImagePickerController()
+        controller.sourceType = .photoLibrary
+        controller.delegate = context.coordinator
+        
+        return controller
+    }
+    
+    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+        
+    }
+    
+    class Coordinator: NSObject, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+        
+        var parent: ImagePicker
+        
+        init(parent: ImagePicker) {
+            self.parent = parent
+        }
+        
+        func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+            if let imageData = (info[.originalImage] as? UIImage)?.pngData() {
+                parent.imageData = imageData
+                parent.showPicker.toggle()
+            }
+        }
+        
+        func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+            
+            parent.showPicker.toggle()
+        }
+    }
 }

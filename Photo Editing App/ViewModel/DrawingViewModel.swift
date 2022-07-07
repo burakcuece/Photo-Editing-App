@@ -17,5 +17,6 @@ class DrawingViewModel: ObservableObject {
     
     func cancelImageEditing() {
         imageData = Data(count: 0)
+        canvas = PKCanvasView()
     }
 }

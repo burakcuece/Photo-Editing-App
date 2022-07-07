@@ -10,16 +10,42 @@ import PencilKit
 
 struct DrawingScreen: View {
     @EnvironmentObject var model: DrawingViewModel
+    @State private var showCameraPicker : Bool = false
+
     var body: some View {
         ZStack {
-            
-            CanvasView(canvas: $model.canvas, imageData: $model.imageData, toolPicker: $model.toolPicker)
+            GeometryReader { proxy -> AnyView in
+                
+                let size = proxy.frame(in: .global).size
+                
+                return AnyView(
+                    
+                    ZStack {
+                        
+                        CanvasView(canvas: $model.canvas, imageData: $model.imageData, toolPicker: $model.toolPicker, rect: size)
+                    }
+                )
+            }
+        }
+//        .toolbar {
+//
+//                ToolbarItem(placement: .navigationBarTrailing) {
+//
+//
+//                    Button {
+//                        
+//                    } label: {
+//                        Text("Speichern")
+//                    }
+//
+//                }
+//
+//            }
         }
     }
-}
-
-struct DrawingScreen_Previews: PreviewProvider {
-    static var previews: some View {
-        DrawingScreen()
+    
+    struct DrawingScreen_Previews: PreviewProvider {
+        static var previews: some View {
+            DrawingScreen()
+        }
     }
-}
