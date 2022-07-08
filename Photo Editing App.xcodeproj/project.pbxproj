@@ -13,6 +13,7 @@
 		726C019E287074A5009589C3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 726C019D287074A5009589C3 /* Preview Assets.xcassets */; };
 		726C01A0287074A5009589C3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726C019F287074A5009589C3 /* Persistence.swift */; };
 		726C01A3287074A5009589C3 /* Photo_Editing_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 726C01A1287074A5009589C3 /* Photo_Editing_App.xcdatamodeld */; };
+		729C44272878A54D00281ACC /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729C44262878A54D00281ACC /* TextBox.swift */; };
 		72C1057228730CB800C79F64 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C1057128730CB800C79F64 /* ImagePicker.swift */; };
 		72C1057428730CEF00C79F64 /* FileManager+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C1057328730CEF00C79F64 /* FileManager+Extensions.swift */; };
 		72C1057628730DC900C79F64 /* ImagePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C1057528730DC900C79F64 /* ImagePickerViewModel.swift */; };
@@ -36,6 +37,7 @@
 		726C019D287074A5009589C3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		726C019F287074A5009589C3 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		726C01A2287074A5009589C3 /* Photo_Editing_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Photo_Editing_App.xcdatamodel; sourceTree = "<group>"; };
+		729C44262878A54D00281ACC /* TextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBox.swift; sourceTree = "<group>"; };
 		72C1057128730CB800C79F64 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		72C1057328730CEF00C79F64 /* FileManager+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extensions.swift"; sourceTree = "<group>"; };
 		72C1057528730DC900C79F64 /* ImagePickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewModel.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			children = (
 				72C105772873105700C79F64 /* Picker.swift */,
 				72C1058D2874419E00C79F64 /* CameraModel.swift */,
+				729C44262878A54D00281ACC /* TextBox.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				726C0199287074A3009589C3 /* ContentView.swift in Sources */,
 				72C1057228730CB800C79F64 /* ImagePicker.swift in Sources */,
 				72FFE1282876F7F100C0AE35 /* DrawingViewModel.swift in Sources */,
+				729C44272878A54D00281ACC /* TextBox.swift in Sources */,
 				726C0197287074A3009589C3 /* Photo_Editing_App.swift in Sources */,
 				72C1058E2874419E00C79F64 /* CameraModel.swift in Sources */,
 				72C1057A28735F0500C79F64 /* ContentView+Extensions.swift in Sources */,
