@@ -129,16 +129,32 @@ struct ContentView: View {
                     }
                 }
                 .overlay(
-                    ColorPicker("", selection: $model.textBoxes[model.currentIndex].textColor)
-                        .labelsHidden()
+                    HStack(spacing: 15){
+                        
+                        // Color Picker...
+                        ColorPicker("", selection: $model.textBoxes[model.currentIndex].textColor)
+                            .labelsHidden()
+                        
+                        Button(action: {
+                            model.textBoxes[model.currentIndex].isBold.toggle()
+                        }, label: {
+                            Text(model.textBoxes[model.currentIndex].isBold ? "Normal" : "Bold")
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                        })
+                    }
                 )
                 .frame(maxHeight: .infinity, alignment: .top)
             }
         }
         
-        .sheet(isPresented: $model.showImagePicker) {
-            ImagePicker(showPicker: $model.showImagePicker, imageData: $model.imageData )
-        }
+        .sheet(isPresented: $model.showImagePicker, content: {
+            ImagePicker(showPicker: $model.showImagePicker, imageData: $model.imageData)
+        })
+        .alert(isPresented: $model.showAlert, content: {
+            Alert(title: Text("Nachricht"), message: Text(model.message), dismissButton: .destructive(Text("Ok")))
+        })
+
     }
 }
 struct ContentView_Previews: PreviewProvider {

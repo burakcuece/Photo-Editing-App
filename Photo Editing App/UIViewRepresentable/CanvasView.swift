@@ -17,8 +17,7 @@ struct CanvasView: UIViewRepresentable {
     
     var rect: CGSize
     
-    func makeUIView(context: Context) ->PKCanvasView {
-        canvas.drawingPolicy = .anyInput
+    func makeUIView(context: Context) -> PKCanvasView {
         
         canvas.isOpaque = false
         canvas.backgroundColor = .clear
@@ -43,8 +42,8 @@ struct CanvasView: UIViewRepresentable {
         return canvas
     }
     
-    func updateUIView(_ uiView: UIViewType, context: Context) {
-        
+    func updateUIView(_ uiView: PKCanvasView, context: Context) {
+
        
     }
 }

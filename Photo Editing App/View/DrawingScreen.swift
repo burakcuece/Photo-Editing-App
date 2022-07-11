@@ -11,25 +11,29 @@ import PencilKit
 struct DrawingScreen: View {
     @EnvironmentObject var model: DrawingViewModel
     @State private var showCameraPicker : Bool = false
-    
     @State private var blurAmount = 0.0
-    
     
     var body: some View {
         ZStack {
-            GeometryReader { proxy -> AnyView in
+            
+            GeometryReader{proxy -> AnyView in
                 
-                let size = proxy.frame(in: .global).size
+                let size = proxy.frame(in: .global)
+                
+                DispatchQueue.main.async {
+                    if model.rect == .zero{
+                        model.rect = size
+                    }
+                }
                 
                 return AnyView(
-                    
-                    
-                    
-                    ZStack {
+                
+                    ZStack{
                         
-                        CanvasView(canvas: $model.canvas, imageData: $model.imageData, toolPicker: $model.toolPicker, rect: size)
+                        CanvasView(canvas: $model.canvas, imageData: $model.imageData, toolPicker: $model.toolPicker,rect: size.size)
                         
-                        ForEach(model.textBoxes) { box in
+                        
+                        ForEach(model.textBoxes){box in
                             
                             Text(model.textBoxes[model.currentIndex].id == box.id && model.addNewBox ? "" : box.text)
                                 .font(.system(size: 30))
@@ -38,10 +42,27 @@ struct DrawingScreen: View {
                                 .offset(box.offset)
                                 .gesture(DragGesture().onChanged({ (value) in
                                     
+                                    let current = value.translation
+                                    // Adding with last Offset...
+                                    let lastOffset = box.lastOffset
+                                    let newTranslation = CGSize(width: lastOffset.width + current.width, height: lastOffset.height + current.height)
+                                    
+                                    model.textBoxes[getIndex(textBox: box)].offset = newTranslation
+                                    
                                 }).onEnded({ (value) in
                                     
+                                    model.textBoxes[getIndex(textBox: box)].lastOffset = model.textBoxes[getIndex(textBox: box)].offset
                                     
                                 }))
+                                .onLongPressGesture {
+                                    // closing the toolbar...
+                                    model.toolPicker.setVisible(false, forFirstResponder: model.canvas)
+                                    model.canvas.resignFirstResponder()
+                                    model.currentIndex = getIndex(textBox: box)
+                                    withAnimation{
+                                        model.addNewBox = true
+                                    }
+                                }
                         }
                     }
                 )
@@ -51,12 +72,9 @@ struct DrawingScreen: View {
             
             ToolbarItem(placement: .navigationBarTrailing) {
                 
-                
-                Button {
-                    
-                } label: {
+                Button(action: model.saveImage, label: {
                     Text("Speichern")
-                }
+                })
             }
             
             ToolbarItem(placement: .navigationBarTrailing) {
@@ -79,4 +97,13 @@ struct DrawingScreen: View {
         }
         
     }
+    func getIndex(textBox: TextBox)->Int{
+        
+        let index = model.textBoxes.firstIndex { (box) -> Bool in
+            return textBox.id == box.id
+        } ?? 0
+        
+        return index
+    }
 }
+
