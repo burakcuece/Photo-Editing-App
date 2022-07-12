@@ -41,6 +41,13 @@ struct ContentView: View {
                         HStack {
                             Text("Blur")
                             Slider(value: $blurAmount, in: 0...10)
+                            
+                            Button(action: actionSheet) {
+                                Image(systemName: "square.and.arrow.up")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(width: 36, height: 36)
+                            }
                         }
                         .padding(.horizontal)
                         
@@ -50,16 +57,16 @@ struct ContentView: View {
                         
                         
                         
-                            .toolbar {
-                                ToolbarItem(placement: .navigationBarLeading) {
-                                    Button {
-                                        model.cancelImageEditing()
-                                    } label: {
-                                        Image(systemName: "xmark")
-                                    }
+                        .toolbar {
+                            ToolbarItem(placement: .navigationBarLeading) {
+                                Button {
+                                    model.cancelImageEditing()
+                                } label: {
+                                    Image(systemName: "xmark")
                                 }
-                                
                             }
+                            
+                        }
                         
                     } else {
                         
@@ -154,8 +161,14 @@ struct ContentView: View {
         .alert(isPresented: $model.showAlert, content: {
             Alert(title: Text("Nachricht"), message: Text(model.message), dismissButton: .destructive(Text("Ok")))
         })
-
+        
     }
+    
+    func actionSheet() {
+           guard let urlShare = URL(string: "https://facebook.com") else { return }
+           let activityVC = UIActivityViewController(activityItems: [urlShare], applicationActivities: nil)
+           UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
+       }
 }
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

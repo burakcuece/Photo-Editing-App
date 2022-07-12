@@ -26,7 +26,6 @@
 		72FFE1262876F75100C0AE35 /* DrawingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FFE1252876F75100C0AE35 /* DrawingScreen.swift */; };
 		72FFE1282876F7F100C0AE35 /* DrawingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FFE1272876F7F100C0AE35 /* DrawingViewModel.swift */; };
 		72FFE12A2876FB4900C0AE35 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FFE1292876FB4900C0AE35 /* CanvasView.swift */; };
-		72FFE12C2877100400C0AE35 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FFE12B2877100400C0AE35 /* DrawingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +50,6 @@
 		72FFE1252876F75100C0AE35 /* DrawingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingScreen.swift; sourceTree = "<group>"; };
 		72FFE1272876F7F100C0AE35 /* DrawingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingViewModel.swift; sourceTree = "<group>"; };
 		72FFE1292876FB4900C0AE35 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
-		72FFE12B2877100400C0AE35 /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +140,6 @@
 			isa = PBXGroup;
 			children = (
 				72C1057128730CB800C79F64 /* ImagePicker.swift */,
-				72FFE12B2877100400C0AE35 /* DrawingView.swift */,
 				72C105912874543500C79F64 /* CameraPreview.swift */,
 				72FFE1292876FB4900C0AE35 /* CanvasView.swift */,
 			);
@@ -254,7 +251,6 @@
 				72C1058E2874419E00C79F64 /* CameraModel.swift in Sources */,
 				72C1057A28735F0500C79F64 /* ContentView+Extensions.swift in Sources */,
 				72C105782873105700C79F64 /* Picker.swift in Sources */,
-				72FFE12C2877100400C0AE35 /* DrawingView.swift in Sources */,
 				726C01A3287074A5009589C3 /* Photo_Editing_App.xcdatamodeld in Sources */,
 				72C1057428730CEF00C79F64 /* FileManager+Extensions.swift in Sources */,
 			);
