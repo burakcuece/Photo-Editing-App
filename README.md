@@ -1,6 +1,6 @@
 # Photo-Editing-App
 
-With the photo editing app you can edit your photos and share them with friends. Programmed with SwiftUI and Clean Architecture.
+With the Photo-Editing-App you can edit and share your photos with friends. Programmed with SwiftUI and Clean Architecture.
 
 ## Previews
 
